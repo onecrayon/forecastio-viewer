@@ -1,0 +1,11 @@
+.DS_Store
+local.properties
+# Android Studio
+.idea/
+.gradle
+build/
+*.iml
+*.iws
+*.ipr
+*~
+*.swp
