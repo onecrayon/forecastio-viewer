@@ -24,6 +24,8 @@ public class MainActivity extends Activity {
         // Enable Javascript
         WebSettings webSettings = mainWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        // Enable localStorage
+        webSettings.setDomStorageEnabled(true);
         // Ensure that forecast.io links open in this app, and others open elsewhere
         mainWebView.setWebViewClient(new MyCustomWebViewClient());
         // Load up the root site!
