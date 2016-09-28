@@ -31,14 +31,14 @@ public class MainActivity extends Activity {
         // Ensure that forecast.io links open in this app, and others open elsewhere
         mainWebView.setWebViewClient(new MyCustomWebViewClient());
         // Load up the root site!
-        mainWebView.loadUrl("http://forecast.io");
+        mainWebView.loadUrl("https://darksky.net/");
     }
 
     private class MyCustomWebViewClient extends WebViewClient {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            // If navigating to forecast.io, just load the URL
-            if (Uri.parse(url).getHost().equals("forecast.io")) {
+            // If navigating to darksky.net, just load the URL
+            if (Uri.parse(url).getHost().equals("darksky.net")) {
                 return false;
             }
             // Otherwise, the link is not for a page on my site, so launch another Activity that handles URLs
